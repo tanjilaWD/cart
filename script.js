@@ -2,27 +2,27 @@ const product =[
     {
     id: 0,
     image: 'download-3.png',
-    title: 'z Flip Foldable Mobile',
+    title: 'Z Flip Foldable Mobile',
     price: 120,
 },
 
 {
     id: 1,
-    image: 'download_2.png',
+    image: 'download-2.png',
     title: 'Air Pods Pro',
     price: 60,
 },
 
 {
     id: 2,
-    image: 'download_1.png',
+    image: 'download-1.png',
     title: '250D DSLR Camera',
     price: 230,
 },
 
 {
     id: 3,
-    image: 'download_4.png',
+    image: 'download-4.png',
     title: 'Head Phone',
     price: 100,
 }
@@ -40,10 +40,12 @@ document.getElementById('root').innerHTML = categories.map((item)=>
         <div class = 'img-box'>
         <img class ='images' src=${image}></img>
         </div>
-        <div class = 'bottom'></div>
+        <div class = 'bottom'>
         <p>${title}</p>
         <h2>$ ${price}.00</h2>`+
-        "<button onclick = '"
-        
+        "<button onclick = 'addtocart ("+(i++)+")'>Add to cart</button> "+
+        `</div>
+        </div>`
+
     )
-})
+}).join('')
