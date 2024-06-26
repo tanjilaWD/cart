@@ -28,3 +28,11 @@ const product =[
 }
 
 ];
+
+const categories = [...new Set(product.map((item)=>
+{return item}))]
+let i = 0;
+document.getElementById('root').innerHTML = categories.map((item)=>
+{
+    var {image, title, price} = item;
+})
