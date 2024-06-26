@@ -55,3 +55,16 @@ body{
     background-color: goldenrod;
     color: white;
 }
+
+.container{
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+#root{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:20px
+}
