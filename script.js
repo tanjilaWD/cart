@@ -57,10 +57,17 @@ function addtocart(a){
     displaycart();
 }
 
-function displaycart(a){
-    let j = 0;
+function delElement(a){
+    cart.splice(a, 1);
+    displaycart();
+}
+
+function displaycart(){
+    let j = 0, total = 0;
+    document.getElementById('count').innerHTML = cart.length;
     if(cart.length==0){
         document.getElementById('cartItem').innerHTML = "Your cart is empty";
+       
     }
     else{
         document.getElementById('cartItem').innerHTML = cart.map((items)=>
@@ -68,11 +75,11 @@ function displaycart(a){
                 var {image, title, price}= items;
                 return(
                     `<div class='cart-item'>
-                    <div class ='rowimg' src=${image}>
+                    <div class ='row-img' src=${image}>
                     </div>
                     <p style ='font-size:12px;'>${title}</p> 
                     <h2 style = 'font-size:15px;'>$ ${price}.00</h2>`+
-                    "<i class = 'fas fa-trash' onclinc='delElement ("+(j++)+")'></i></div>"
+                    "<i class = 'fas fa-trash' onclick='delElement ("+(j++)+")'></i></div>"
                 );
           }).join('');
         
