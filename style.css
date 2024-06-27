@@ -121,3 +121,34 @@ body{
     object-position: center;
 }
 
+.bottom{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+}
+
+h2{
+    font-size: 20px;
+    color: red;
+}
+button{
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: goldenrod;
+    padding: 7px 25px;
+    cursor: pointer;
+    color: white;
+
+}
+
+button:hover{
+    background-color: #333;
+}
