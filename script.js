@@ -51,6 +51,12 @@ document.getElementById('root').innerHTML = categories.map((item)=>
 }).join('')
 
 var cart =[];
+
+function addtocart(a){
+    cart.push({...categories[a]});
+    displaycart();
+}
+
 function displaycart(a){
     let j = 0;
     if(cart.length==0){
@@ -66,10 +72,9 @@ function displaycart(a){
                     </div>
                     <p style ='font-size:12px;'>${title}</p> 
                     <h2 style = 'font-size:15px;'>$ ${price}.00</h2>`+
-                    "<i class = 'fas fa-trash' onclinc='delElement ("+(j++)+") "
-                )
-
-        })
+                    "<i class = 'fas fa-trash' onclinc='delElement ("+(j++)+")'></i></div>"
+                );
+          }).join('');
         
     }
 }
